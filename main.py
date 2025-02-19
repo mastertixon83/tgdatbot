@@ -45,7 +45,7 @@ def save_user(user_id, username):
     if cursor.fetchone() is None:
         cursor.execute("INSERT INTO users (id, username) VALUES (?, ?)", (user_id, username))
         conn.commit()
-        logger.info(f"👤 Новый пользователь сохранён: {user_id} ({username})")
+        logger.info(f"👤 Новый пользователь сохранён в бд: {user_id} ({username})")
 
 
 def load_messages(target):
